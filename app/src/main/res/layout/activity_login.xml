@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Login">
 
 
@@ -15,6 +16,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/textview_login"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,16 +31,17 @@
         android:layout_marginEnd="24dp"
         android:hint="@string/email"
         android:textColorHint="@color/black"
-        app:boxCornerRadiusTopEnd="20sp"
-        app:boxCornerRadiusTopStart="20sp"
         app:boxCornerRadiusBottomEnd="0sp"
         app:boxCornerRadiusBottomStart="0sp"
+        app:boxCornerRadiusTopEnd="20sp"
+        app:boxCornerRadiusTopStart="20sp"
+        app:boxStrokeColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login"
-        app:layout_constraintVertical_bias="1.0" >
+        app:layout_constraintVertical_bias="1.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/field_email"
@@ -48,6 +51,7 @@
             android:drawablePadding="5sp"
             android:nextFocusForward="@id/field_password"
             android:singleLine="true"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -56,28 +60,32 @@
         android:id="@+id/password"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:hint="@string/password"
         android:textColorHint="@color/black"
-        app:boxCornerRadiusTopEnd="0sp"
-        app:boxCornerRadiusTopStart="0sp"
         app:boxCornerRadiusBottomEnd="20sp"
         app:boxCornerRadiusBottomStart="20sp"
+        app:boxCornerRadiusTopEnd="0sp"
+        app:boxCornerRadiusTopStart="0sp"
+        app:boxStrokeColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button_login"
         app:layout_constraintEnd_toEndOf="@+id/email"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/email" >
+        app:layout_constraintStart_toStartOf="@+id/email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/field_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/pass_lock"
-            android:drawableEnd="@drawable/pass_eye"
             android:drawablePadding="5sp"
+            android:inputType="textPassword"
             android:nextFocusForward="@id/button_login"
             android:singleLine="true"
-            android:textSize="25sp"
-            android:inputType="textPassword"/>
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:text="@string/forgot_password"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_login"
@@ -95,8 +104,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0sp"
+        android:layout_height="75sp"
         android:layout_marginBottom="8dp"
         android:text="@string/signup_button_text"
         android:textColor="@color/black"
