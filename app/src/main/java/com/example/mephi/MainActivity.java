@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new NewsPaperFragment());
             } else if (item.getItemId() == R.id.action_services && !item.isChecked()) {
                 item.setChecked(true);
+                replaceFragment(new ServicesFragment());
             } else {
                 item.setChecked(true);
             }

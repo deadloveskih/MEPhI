@@ -21,7 +21,17 @@
         <item name="cornerSizeTopRight">8%</item>
         <item name="cornerSizeBottomLeft">8%</item>
         <item name="cornerSizeBottomRight">8%</item>
+    </style>
 
+    <style name="UltraCornerCut" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
     </style>
 
     <style name="Theme.MEPhI" parent="Base.Theme.MEPhI" />
