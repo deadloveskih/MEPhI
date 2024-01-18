@@ -12,5 +12,17 @@
         <item name="android:color">@color/gray</item>
     </style>
 
+    <style name="CornerCut" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeTopLeft">8%</item>
+        <item name="cornerSizeTopRight">8%</item>
+        <item name="cornerSizeBottomLeft">8%</item>
+        <item name="cornerSizeBottomRight">8%</item>
+
+    </style>
+
     <style name="Theme.MEPhI" parent="Base.Theme.MEPhI" />
 </resources>
