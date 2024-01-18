@@ -1,10 +1,7 @@
 package com.example.mephi;
 
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -14,15 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.ArrayList;
 
 public class NewsPaperFragment extends Fragment {
 
     ArrayList<Article> newsArrayList;
-    private String[] newsHeading;
-    private RecyclerView recyclerView;
-    private int[] newsImageIDs;
 
     public static NewsPaperFragment newInstance(String param1, String param2) {
         NewsPaperFragment fragment = new NewsPaperFragment();
@@ -49,7 +45,12 @@ public class NewsPaperFragment extends Fragment {
 
         dataInitialize();
 
-        recyclerView = view.findViewById(R.id.news_paper);
+        Animation topAnim = AnimationUtils.loadAnimation(getContext(), R.anim.fragment);
+
+        RecyclerView newsPaper = view.findViewById(R.id.news_paper);
+        newsPaper.setAnimation(topAnim);
+
+        RecyclerView recyclerView = view.findViewById(R.id.news_paper);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setHasFixedSize(false);
         NewsPaperAdapter npAdapter = new NewsPaperAdapter(getContext(), newsArrayList);
@@ -59,7 +60,7 @@ public class NewsPaperFragment extends Fragment {
 
     private void dataInitialize() {
         newsArrayList = new ArrayList<>();
-        newsHeading = new String[]{
+        String[] newsHeading = new String[]{
                 "Посвящение в студенты",
                 "III Конгресс молодых ученных",
                 "Объявление",
@@ -71,7 +72,7 @@ public class NewsPaperFragment extends Fragment {
                 "Sample",
         };
 
-        newsImageIDs = new int[]{
+        int[] newsImageIDs = new int[]{
                 R.drawable.ic_launcher_background,
                 R.drawable.ic_launcher_foreground,
                 R.drawable.bolt,
