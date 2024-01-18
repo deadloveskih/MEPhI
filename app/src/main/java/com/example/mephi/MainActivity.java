@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.os.Parcelable;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new NewsPaperFragment());
             } else if (item.getItemId() == R.id.action_services && !item.isChecked()) {
                 item.setChecked(true);
-                replaceFragment(new ServicesFragment());
+                replaceFragment(new ServiceFragment());
             } else {
                 item.setChecked(true);
             }

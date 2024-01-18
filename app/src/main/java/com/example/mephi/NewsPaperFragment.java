@@ -46,7 +46,6 @@ public class NewsPaperFragment extends Fragment {
         dataInitialize();
 
         Animation topAnim = AnimationUtils.loadAnimation(getContext(), R.anim.fragment);
-
         RecyclerView newsPaper = view.findViewById(R.id.news_paper);
         newsPaper.setAnimation(topAnim);
 
